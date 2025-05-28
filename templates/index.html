@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Upload Maintenance Logs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>Upload Aircraft Maintenance Logs (CSV)</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".csv" required>
+    <button type="submit">Upload & View Dashboard</button>
+  </form>
+  <p>S3 Bucket: {{ bucket }}</p>
+</body>
+</html>
